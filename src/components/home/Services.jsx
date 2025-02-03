@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import AnimatedTitle from "../common/animation/AnimatedTitle";
-import { BentoTilt } from "../common/animation/BentoTilt";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -112,7 +111,7 @@ const Services = () => {
 
         <div id="clip" ref={containerRef} className="bento-image">
           <div className=" img-container">
-            <img src="/public/img/service1.jpeg" alt="" />
+            <img src="/img/service1.jpeg" alt="" />
           </div>
 
           <div className="service-title">
