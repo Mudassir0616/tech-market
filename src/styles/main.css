@@ -1,0 +1,140 @@
+.hero-banner {
+  position: relative;
+  height: 100dvh;
+  background-image: url("/public/img/banner.jpg");
+  background-position-y: 20%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 40;
+}
+@media screen and (max-width: 768px) {
+  .hero-banner {
+    background-position-x: 20%;
+  }
+}
+.hero-banner .content {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  text-align: center;
+}
+.hero-banner .content h1 {
+  margin: 0;
+}
+
+.bottom-content {
+  position: absolute;
+  bottom: 40px;
+  right: 100px;
+  z-index: 100;
+  margin: 0;
+  font-size: 64px;
+}
+@media screen and (max-width: 768px) {
+  .bottom-content {
+    font-size: 38px;
+    right: 20px;
+    bottom: 35px;
+  }
+}
+
+.text-white {
+  color: white;
+  z-index: 40;
+}
+
+.text-black {
+  color: black;
+  z-index: 0;
+}
+
+.service-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  min-height: 300dvh;
+  margin-top: 80px;
+}
+.service-container .heading {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.service-container .heading .service-heading {
+  font-size: 56px;
+  color: black;
+  margin: 0;
+  max-width: 900px;
+}
+@media screen and (max-width: 768px) {
+  .service-container .heading .service-heading {
+    font-size: 28px;
+    max-width: 90%;
+  }
+}
+.service-container .bento-image {
+  width: 100dvw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+}
+.service-container .bento-image .img-container {
+  position: relative;
+  width: 400px;
+  height: 500px;
+  -webkit-clip-path: polygon(15% 1%, 95% 7%, 95% 90%, 0% 100%);
+          clip-path: polygon(15% 1%, 95% 7%, 95% 90%, 0% 100%);
+}
+@media screen and (max-width: 768px) {
+  .service-container .bento-image .img-container {
+    width: 250px;
+    height: 350px;
+  }
+}
+.service-container .bento-image .img-container img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 16px;
+}
+.service-container .bento-image .title-container {
+  align-items: flex-start;
+  justify-content: start;
+}
+.service-container .bento-image .service-title {
+  position: absolute;
+  top: 0;
+  left: 20%;
+  color: white;
+  z-index: 100;
+  opacity: 0;
+  max-width: 700px;
+}
+@media screen and (max-width: 768px) {
+  .service-container .bento-image .service-title {
+    left: 0;
+    top: -100px;
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
+.service-container .bento-image .service-title h2 {
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 68px;
+  color: white;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+  .service-container .bento-image .service-title h2 {
+    font-size: 44px;
+    line-height: 50px;
+  }
+}
+.service-container .bento-image .service-title p {
+  font-size: 16px;
+}/*# sourceMappingURL=main.css.map */

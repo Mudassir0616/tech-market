@@ -1,0 +1,153 @@
+     ////////////////////////////////////// Hero Banner ///////////////////////////////
+
+     .hero-banner {
+         position: relative;
+         height: 100dvh;
+         background-image: url('/public/img/banner.jpg');
+         background-position-y: 20%;
+         background-repeat: no-repeat;
+         background-size: cover;
+         z-index: 40;
+
+         @media screen and (max-width: 768px) {
+             background-position-x: 20%;
+         }
+
+         .content {
+             position: absolute;
+             top: 40%;
+             left: 50%;
+             transform: translate(-50%, -50%);
+             z-index: 100;
+             text-align: center;
+
+             h1 {
+                 margin: 0;
+             }
+         }
+     }
+
+     .bottom-content {
+         position: absolute;
+         bottom: 40px;
+         right: 100px;
+         z-index: 100;
+         margin: 0;
+         font-size: 64px;
+
+
+         @media screen and (max-width: 768px) {
+             font-size: 38px;
+             right: 20px;
+             bottom: 35px;
+         }
+     }
+
+     .text-white {
+         color: white;
+         z-index: 40;
+     }
+
+     .text-black {
+         color: black;
+         z-index: 0;
+     }
+
+
+
+
+     //////////////////////////////// Services Section /////////////////////////
+
+     .service-container {
+         display: flex;
+         align-items: center;
+         justify-content: flex-start;
+         flex-direction: column;
+         min-height: 300dvh;
+         margin-top: 80px;
+
+         .heading {
+             text-align: center;
+             display: flex;
+             align-items: center;
+             flex-direction: column;
+
+             .service-heading {
+                 font-size: 56px;
+                 color: black;
+                 margin: 0;
+                 max-width: 900px;
+
+                 @media screen and (max-width: 768px) {
+                     font-size: 28px;
+                     max-width: 90%;
+                 }
+             }
+         }
+
+         .bento-image {
+             width: 100dvw;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             margin-top: 60px;
+
+             .img-container {
+                 position: relative;
+                 width: 400px;
+                 height: 500px;
+                 clip-path: polygon(15% 1%, 95% 7%, 95% 90%, 0% 100%);
+
+                 @media screen and (max-width: 768px) {
+                     width: 250px;
+                     height: 350px;
+                 }
+
+                 img {
+                     object-fit: cover;
+                     border-radius: 16px;
+                 }
+             }
+
+             .title-container {
+                 align-items: flex-start;
+                 justify-content: start;
+             }
+
+             .service-title {
+                 position: absolute;
+                 top: 0;
+                 left: 20%;
+                 color: white;
+                 z-index: 100;
+                 opacity: 0;
+                 max-width: 700px;
+
+                 @media screen and (max-width: 768px) {
+                     left: 0;
+                     top: -100px;
+                     max-width: 100%;
+                     padding: 0 20px;
+                 }
+
+                 h2 {
+                     font-size: 60px;
+                     font-weight: 400;
+                     line-height: 68px;
+                     color: white;
+                     margin-bottom: 20px;
+
+                     @media screen and (max-width: 768px) {
+                         font-size: 44px;
+                         line-height: 50px;
+                     }
+                 }
+
+                 p {
+                     font-size: 16px;
+                 }
+             }
+         }
+
+
+     }
