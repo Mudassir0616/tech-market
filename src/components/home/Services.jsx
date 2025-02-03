@@ -59,7 +59,7 @@ const Services = () => {
           scrollTrigger: {
             trigger: containerRef.current,
             start: "top top+=30%",
-            end: "bottom+=2000 center",
+            end: "bottom+=1000 center",
             pin: true,
             scrub: 1,
             markers: true,
