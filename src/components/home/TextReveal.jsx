@@ -51,3 +51,49 @@ const TextReveal = () => {
 };
 
 export default TextReveal;
+
+// import React, { useEffect, useRef } from "react";
+// import { gsap } from "gsap";
+// import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
+// gsap.registerPlugin(ScrollTrigger);
+
+// const text =
+//   "Your one-stop solution for all IT services, delivering excellence and crafted to meet your tech needs.";
+
+// const TextReveal = () => {
+//   const textRef = useRef(null);
+
+//   useEffect(() => {
+//     const words = textRef.current.innerText.split(" ");
+//     textRef.current.innerHTML = words
+//       .map((word) => `<span class="reveal-word">${word}</span>`)
+//       .join(" ");
+
+//     gsap.to(".reveal-word", {
+//       scrollTrigger: {
+//         trigger: textRef.current,
+//         scrub: 2,
+//         start: "top center+=100",
+//         end: "bottom 85%",
+//       },
+//       color: "#2A2A2A",
+//       duration: 5,
+//       stagger: 1,
+//     });
+//   }, []);
+
+//   return (
+//     <section>
+//       <div className="text-reveal-container">
+//         <div className="reveal">
+//           <p className="reveal-text" ref={textRef}>
+//             {text}
+//           </p>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default TextReveal;

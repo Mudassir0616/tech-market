@@ -57,7 +57,7 @@ const Services = () => {
       </div>
 
       <div className="cctv-container">
-        <img src="/img/cctv.jpeg" alt="CCTV" className="bg-img" />
+        <img src="/img/cctv.webp" alt="CCTV" className="bg-img" />
       </div>
     </section>
   );

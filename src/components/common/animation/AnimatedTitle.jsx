@@ -5,7 +5,11 @@ import clsx from "clsx";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const AnimatedTitle = ({ title, containerClass }) => {
+const AnimatedTitle = ({
+  title,
+  containerClass,
+  animate = "animated-word",
+}) => {
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -21,7 +25,7 @@ const AnimatedTitle = ({ title, containerClass }) => {
       });
 
       titleAnimation.to(
-        ".animated-word",
+        `.${animate}`,
         {
           opacity: 1,
           transform: "translate3d(0, 0, 0) rotateY(0deg) rotateX(0deg)",
@@ -42,7 +46,7 @@ const AnimatedTitle = ({ title, containerClass }) => {
           {line.split(" ").map((word, idx) => (
             <span
               key={idx}
-              className="animated-word"
+              className={animate}
               dangerouslySetInnerHTML={{ __html: word }}
             />
           ))}

@@ -4,6 +4,7 @@ import SecondSection from "../components/home/SecondSection";
 import Services from "../components/home/Services";
 import TextReveal from "../components/home/TextReveal";
 import AnimatedTitle from "../components/common/animation/AnimatedTitle";
+import NewSection from "../components/home/NewSection";
 
 const Home = () => {
   return (
@@ -26,6 +27,8 @@ const Home = () => {
       <Services />
 
       <TextReveal />
+
+      <NewSection />
 
       <div style={{ height: "200dvh" }}></div>
     </>
