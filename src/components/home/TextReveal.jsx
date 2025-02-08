@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 const text =
-  "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.";
+  "Your one-stop solution for all IT services, delivering excellence and crafted to meet your tech needs.";
 
 const TextReveal = () => {
   const [lettersRef, setlettersRef] = useArrayRef();
@@ -20,8 +20,8 @@ const TextReveal = () => {
     const anim = gsap.to(lettersRef.current, {
       scrollTrigger: {
         trigger: triggerRef.current,
-        scrub: true,
-        start: "top center",
+        scrub: 2,
+        start: "top center+=100",
         end: "bottom 85%",
       },
       color: "#2A2A2A",
@@ -34,10 +34,8 @@ const TextReveal = () => {
   }, []);
 
   return (
-    <section className="container">
+    <section>
       <div className="text-reveal-container">
-        <h1>Who Are We?</h1>
-
         <div className="reveal">
           <div ref={triggerRef}>
             {text.split("").map((letter, index) => (

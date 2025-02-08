@@ -7,60 +7,56 @@ gsap.registerPlugin(ScrollTrigger);
 const Services = () => {
   const servicesRef = useRef(null);
   const laptopsContainerRef = useRef(null);
+  const titleRef = useRef(null);
 
   useEffect(() => {
-    const servicesElement = servicesRef.current;
     const laptopsContainerElement = laptopsContainerRef.current;
+    const titleElement = titleRef.current;
 
-    // Animation for "OUR SERVICES" text
-    gsap.from(servicesElement, {
-      opacity: 0,
-      y: 50,
-      duration: 1,
-      ease: "power2.out",
-    });
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: servicesRef.current,
+          start: `top top`,
+          end: `bottom+=1500 top`,
+          // end: "+=3000",
+          pin: true,
+          scrub: 2,
+        },
+      });
 
-    // Pin the "OUR SERVICES" text and animate the laptops-container
-    gsap.to(servicesElement, {
-      scrollTrigger: {
-        trigger: servicesElement,
-        start: "top top",
-        end: "+=100",
-        pin: true,
-        pinSpacing: false,
-      },
-    });
+      tl.from(titleElement, {
+        color: "#2A2A2A",
+      });
 
-    // Animate the laptops-container to come from below
-    gsap.from(laptopsContainerElement, {
-      scrollTrigger: {
-        trigger: laptopsContainerElement,
-        start: "top top",
-        end: "top bottom",
-        scrub: 1,
-        markers: true,
-      },
-      y: 100,
-      opacity: 0,
-      duration: 1,
-      ease: "power2.out",
-    });
+      tl.from(".laptops-container", {
+        top: "100%",
+        ease: "power3.inOut",
+      });
+
+      tl.from(
+        ".cctv-container",
+        {
+          top: "100%",
+          ease: "power3.inOut",
+        },
+        "+=0.5"
+      );
+    }, servicesRef);
+
+    return () => ctx.revert();
   }, []);
 
   return (
-    <section className="services-container">
+    <section className="services-container" ref={servicesRef}>
       <h1 className="white-shine">OUR SERVICES</h1>
 
       <div className="laptops-container">
-        <img src="/img/laptop.png" alt="" className="bg-img" />
-
-        {/* <img src="/img/laptop.jpeg" alt="" className="center-img" /> */}
+        <img src="/img/laptop.png" alt="Laptop" className="bg-img" />
       </div>
 
-      <div className="laptops-container">
-        <img src="/img/cctv.jpeg" alt="" className="bg-img" />
-
-        {/* <img src="/img/cctv.jpeg" alt="" className="center-img" /> */}
+      <div className="cctv-container">
+        <img src="/img/cctv.jpeg" alt="CCTV" className="bg-img" />
       </div>
     </section>
   );
