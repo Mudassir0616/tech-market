@@ -50,40 +50,41 @@
   z-index: 0;
 }
 
-.service-container {
+.second-container {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
-  min-height: 300dvh;
+  height: 285dvh;
   margin-top: 80px;
 }
-.service-container .heading {
+.second-container .heading {
   text-align: center;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-.service-container .heading .service-heading {
-  font-size: 56px;
+.second-container .heading .service-heading {
+  font-size: 64px;
   color: black;
   margin: 0;
-  max-width: 900px;
+  font-weight: 600;
+  max-width: 1100px;
 }
 @media screen and (max-width: 768px) {
-  .service-container .heading .service-heading {
+  .second-container .heading .service-heading {
     font-size: 28px;
     max-width: 90%;
   }
 }
-.service-container .bento-image {
+.second-container .bento-image {
   width: 100dvw;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 60px;
 }
-.service-container .bento-image .img-container {
+.second-container .bento-image .img-container {
   position: relative;
   width: 400px;
   height: 500px;
@@ -91,21 +92,21 @@
           clip-path: polygon(15% 1%, 95% 7%, 95% 90%, 0% 100%);
 }
 @media screen and (max-width: 768px) {
-  .service-container .bento-image .img-container {
+  .second-container .bento-image .img-container {
     width: 250px;
     height: 350px;
   }
 }
-.service-container .bento-image .img-container img {
+.second-container .bento-image .img-container img {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 16px;
 }
-.service-container .bento-image .title-container {
+.second-container .bento-image .title-container {
   align-items: flex-start;
   justify-content: start;
 }
-.service-container .bento-image .service-title {
+.second-container .bento-image .service-title {
   position: absolute;
   top: 0;
   left: 20%;
@@ -115,14 +116,14 @@
   max-width: 700px;
 }
 @media screen and (max-width: 768px) {
-  .service-container .bento-image .service-title {
+  .second-container .bento-image .service-title {
     left: 0;
     top: -100px;
     max-width: 100%;
     padding: 0 20px;
   }
 }
-.service-container .bento-image .service-title h2 {
+.second-container .bento-image .service-title h2 {
   font-size: 60px;
   font-weight: 400;
   line-height: 68px;
@@ -130,11 +131,86 @@
   margin-bottom: 20px;
 }
 @media screen and (max-width: 768px) {
-  .service-container .bento-image .service-title h2 {
+  .second-container .bento-image .service-title h2 {
     font-size: 44px;
     line-height: 50px;
   }
 }
-.service-container .bento-image .service-title p {
+.second-container .bento-image .service-title p {
   font-size: 16px;
+}
+
+.services-container {
+  margin-top: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+@media screen and (max-width: 768px) {
+  .services-container {
+    margin-top: 60px;
+  }
+}
+.services-container h1 {
+  text-align: center;
+  font-size: 85px;
+  font-weight: 400;
+}
+@media screen and (max-width: 768px) {
+  .services-container h1 {
+    font-size: 38px;
+  }
+}
+.services-container .laptops-container {
+  position: relative;
+}
+.services-container .laptops-container .bg-img {
+  width: 90dvw;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.services-container .laptops-container .center-img {
+  position: absolute;
+  width: 550px;
+  height: 500px;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (max-width: 768px) {
+  .services-container .laptops-container .center-img {
+    width: 90%;
+    height: 400px;
+  }
+}
+
+.text-reveal-container h1 {
+  font-size: 60px;
+  font-weight: 500;
+}
+.text-reveal-container .reveal {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: 100%;
+}
+.text-reveal-container .reveal div {
+  max-width: 80%;
+}
+.text-reveal-container .reveal-text {
+  font-weight: 800;
+  font-size: 10rem;
+  line-height: 13rem;
+  color: #FEF852;
+  filter: drop-shadow(0 0 0.06rem rgb(2, 2, 2));
+}
+@media screen and (max-width: 768px) {
+  .text-reveal-container .reveal-text {
+    font-size: 5rem;
+    line-height: 8rem;
+  }
 }/*# sourceMappingURL=main.css.map */
