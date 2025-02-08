@@ -157,22 +157,23 @@ main {
 .floating-nav {
     background-color: $sidenav-backgroundColor;
     border: 1px solid $sidenav-backgroundColor;
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
 
 .nav-container {
     position: fixed;
     top: 1rem;
-    inset-inline: 0;
+    inset-inline: 0.6rem;
     z-index: 50;
-    height: 4rem;
+    height: 3.2rem;
     border: none;
     // background-color: $sidenav-backgroundColor;
     transition: all $transition-duration ease;
 
     @media (min-width: 640px) {
         inset-inline: 1.5rem;
+        height: 4rem;
     }
 }
 
@@ -188,6 +189,10 @@ main {
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
+
+    @media (max-width: 768px) {
+        padding: 0 20px;
+    }
 }
 
 .logo-container {
@@ -210,6 +215,24 @@ main {
 
         @media (min-width: 768px) {
             display: flex;
+        }
+    }
+}
+
+.hamburger {
+    display: none;
+
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        .line {
+            content: '';
+            width: 30px;
+            height: 3px;
+            border-radius: 24px;
+            background-color: white;
         }
     }
 }

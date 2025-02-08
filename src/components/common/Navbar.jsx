@@ -60,6 +60,12 @@ const NavBar = () => {
               </a>
             </div>
           </div>
+
+          <div className="hamburger">
+            <div className="line"></div>
+            <div className="line"></div>
+            <div className="line"></div>
+          </div>
         </nav>
       </header>
     </nav>

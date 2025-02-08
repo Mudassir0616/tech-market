@@ -124,21 +124,22 @@ main {
 .floating-nav {
   background-color: #0D0E12;
   border: 1px solid #0D0E12;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
 .nav-container {
   position: fixed;
   top: 1rem;
-  inset-inline: 0;
+  inset-inline: 0.6rem;
   z-index: 50;
-  height: 4rem;
+  height: 3.2rem;
   border: none;
   transition: all 0.4s ease;
 }
 @media (min-width: 640px) {
   .nav-container {
     inset-inline: 1.5rem;
+    height: 4rem;
   }
 }
 
@@ -154,6 +155,11 @@ main {
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
+}
+@media (max-width: 768px) {
+  .nav-inner {
+    padding: 0 20px;
+  }
 }
 
 .logo-container {
@@ -177,6 +183,24 @@ main {
 @media (min-width: 768px) {
   .nav-links-container .nav-links {
     display: flex;
+  }
+}
+
+.hamburger {
+  display: none;
+}
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .hamburger .line {
+    content: "";
+    width: 30px;
+    height: 3px;
+    border-radius: 24px;
+    background-color: white;
   }
 }
 

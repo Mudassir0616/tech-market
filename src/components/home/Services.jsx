@@ -18,10 +18,11 @@ const Services = () => {
         scrollTrigger: {
           trigger: servicesRef.current,
           start: `top top`,
-          end: `bottom+=1500 top`,
+          end: `bottom+=500 top-=300`,
           // end: "+=3000",
           pin: true,
-          scrub: 2,
+          scrub: 1,
+          markers: true,
         },
       });
 
@@ -52,7 +53,7 @@ const Services = () => {
       <h1 className="white-shine">OUR SERVICES</h1>
 
       <div className="laptops-container">
-        <img src="/img/laptop.png" alt="Laptop" className="bg-img" />
+        <img src="/img/banner.jpg" alt="Laptop" className="bg-img" />
       </div>
 
       <div className="cctv-container">
