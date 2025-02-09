@@ -122,23 +122,21 @@ main {
 }
 
 .floating-nav {
-  background-color: #0D0E12;
+  background-color: lightgray;
   border: 1px solid #0D0E12;
-  border-radius: 8px;
 }
 
 .nav-container {
   position: fixed;
-  top: 1rem;
-  inset-inline: 0.6rem;
+  top: 0;
   z-index: 50;
-  height: 3.2rem;
+  height: 2.8rem;
   border: none;
   transition: all 0.4s ease;
 }
 @media (min-width: 640px) {
   .nav-container {
-    inset-inline: 1.5rem;
+    inset-inline: 0;
     height: 4rem;
   }
 }
@@ -154,7 +152,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 0 4rem;
 }
 @media (max-width: 768px) {
   .nav-inner {

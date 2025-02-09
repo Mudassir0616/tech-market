@@ -155,24 +155,22 @@ main {
 ////////////////////////////////////////////////// Nav Bar /////////////////////////////////////////
 
 .floating-nav {
-    background-color: $sidenav-backgroundColor;
+    background-color: lightgray;
     border: 1px solid $sidenav-backgroundColor;
-    border-radius: 8px;
 }
 
 
 .nav-container {
     position: fixed;
-    top: 1rem;
-    inset-inline: 0.6rem;
+    top: 0;
     z-index: 50;
-    height: 3.2rem;
+    height: 2.8rem;
     border: none;
     // background-color: $sidenav-backgroundColor;
     transition: all $transition-duration ease;
 
     @media (min-width: 640px) {
-        inset-inline: 1.5rem;
+        inset-inline: 0;
         height: 4rem;
     }
 }
@@ -188,7 +186,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 0 4rem;
 
     @media (max-width: 768px) {
         padding: 0 20px;
