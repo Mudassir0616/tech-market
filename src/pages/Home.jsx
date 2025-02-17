@@ -20,15 +20,16 @@ const Home = () => {
               containerClass={"service-heading white-shine"}
             />
           </div>
-          <SecondSection />
         </div>
       </section>
+
+      <SecondSection />
 
       <Services />
 
       <TextReveal />
 
-      <NewSection />
+      {/* <NewSection /> */}
 
       <div style={{ height: "200dvh" }}></div>
     </>

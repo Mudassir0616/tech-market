@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import "./styles/style.css";
 import "./styles/main.css";
 import NavBar from "./components/common/Navbar";
+import Blogs from "./pages/Blogs";
 
 function App() {
   return (
@@ -18,9 +19,10 @@ function App() {
       </head>
       <NavBar />
 
-      <Home />
       <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/blogs" element={<Blogs />} />
       </Routes>
     </>
   );

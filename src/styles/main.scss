@@ -1,3 +1,22 @@
+     $main-bgColor: #FCFCFC;
+
+     $sidenav-backgroundColor: #0D0E12;
+     $sidenav-color: #FFFF;
+     $grey-text-color: #5E5E5E;
+     $dark-text-color: #1A1A1A;
+     $rating-color: #FFBB55;
+     $black: #202020;
+     $border-color: #EDEDED;
+
+     $primary-color: #E10600;
+     $light-yellow: #FFFEF5;
+
+     $yellow: #FDFAE4;
+     $transition-duration: 0.4s;
+
+     $macbook-color: #2E3642;
+     $macbook-silver-color: #E4E4E6;
+
      ////////////////////////////////////// Hero Banner ///////////////////////////////
 
      .hero-banner {
@@ -63,16 +82,7 @@
          align-items: center;
          justify-content: flex-start;
          flex-direction: column;
-         height: 300dvh;
          //  margin-top: 80px;
-
-         @media screen and (max-width: 768px) {
-             height: 220dvh;
-         }
-
-         @media screen and (max-width: 390px) {
-             height: 285dvh;
-         }
 
          .heading {
              text-align: center;
@@ -94,71 +104,76 @@
              }
          }
 
-         .bento-image {
-             width: 100dvw;
-             display: flex;
-             align-items: center;
-             justify-content: center;
-             margin-top: 60px;
+     }
 
-             .img-container {
-                 position: relative;
-                 width: 400px;
-                 height: 500px;
-                 clip-path: polygon(15% 1%, 95% 7%, 95% 90%, 0% 100%);
 
-                 @media screen and (max-width: 768px) {
-                     width: 250px;
-                     height: 350px;
-                 }
 
-                 img {
-                     object-fit: cover;
-                     border-radius: 16px;
-                 }
+     .bento-image {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         padding: 40px 0;
+         height: 100dvh;
+
+         .img-container {
+             position: relative;
+             width: 400px;
+             height: 500px;
+             clip-path: polygon(15% 1%, 95% 7%, 95% 90%, 0% 100%);
+
+             @media screen and (max-width: 768px) {
+                 width: 250px;
+                 height: 350px;
              }
 
-             .title-container {
-                 align-items: flex-start;
-                 justify-content: start;
-             }
-
-             .service-title {
-                 position: absolute;
-                 top: 0;
-                 left: 20%;
-                 color: white;
-                 z-index: 100;
-                 opacity: 0;
-                 max-width: 700px;
-
-                 @media screen and (max-width: 768px) {
-                     left: 0;
-                     top: -100px;
-                     max-width: 100%;
-                     padding: 0 20px;
-                 }
-
-                 h2 {
-                     font-size: 60px;
-                     font-weight: 400;
-                     line-height: 68px;
-                     color: white;
-                     margin-bottom: 20px;
-
-                     @media screen and (max-width: 768px) {
-                         font-size: 44px;
-                         line-height: 50px;
-                     }
-                 }
-
-                 p {
-                     font-size: 16px;
-                 }
+             img {
+                 object-fit: cover;
+                 border-radius: 16px;
              }
          }
 
+         .title-container {
+             align-items: flex-start;
+             justify-content: start;
+         }
 
+         .service-title {
+             position: absolute;
+             top: 20%;
+             left: 25%;
+             color: white;
+             z-index: 100;
+             opacity: 0;
+             max-width: 700px;
+
+             @media screen and (max-width: 768px) {
+                 left: 0;
+                 top: 100px;
+                 max-width: 100%;
+                 padding: 0 20px;
+             }
+
+             h2 {
+                 font-size: 60px;
+                 font-weight: 400;
+                 line-height: 68px;
+                 color: white;
+                 margin-bottom: 20px;
+
+                 @media screen and (max-width: 768px) {
+                     font-size: 32px;
+                     line-height: 50px;
+                 }
+             }
+
+             p {
+                 font-size: 16px;
+
+                 @media screen and (max-width: 768px) {
+                     font-size: 14px;
+                 }
+             }
+         }
      }
 
 
@@ -166,48 +181,7 @@
 
      ////////////////////////////////// Service Section //////////////////////////
 
-     .services-container {
-         margin-top: 0;
-         display: flex;
-         align-items: center;
-         flex-direction: column;
-         position: relative;
-         height: 100dvh;
-
-         @media screen and (max-width: 768px) {
-             margin-top: 60px;
-         }
-
-         h1 {
-             text-align: center;
-             font-size: 100px;
-             font-weight: 500;
-             margin: 0;
-
-             @media screen and (max-width: 768px) {
-                 font-size: 40px;
-                 margin: 10px 0;
-             }
-         }
-
-         .laptops-container,
-         .cctv-container {
-             position: absolute;
-             top: 0;
-             left: 0;
-
-             .bg-img {
-                 width: 100dvw;
-                 height: 100dvh;
-                 //  height: 100dvh;
-                 object-fit: cover;
-                 //  filter: blur(6px);
-                 //  opacity: 0.95;
-             }
-         }
-     }
-
-
+     .services-container {}
 
 
 
@@ -298,6 +272,24 @@
              img {
                  border-radius: 12px;
                  clip-path: polygon(9% 0, 76% 1%, 93% 73%, 27% 100%);
+             }
+         }
+     }
+
+
+
+
+     .blogs-container {
+         .blog-title {
+             h1 {
+                 font-size: 4rem;
+                 margin: 0;
+                 font-weight: 500;
+             }
+
+             p {
+                 font-size: 20px;
+                 font-weight: 500;
              }
          }
      }

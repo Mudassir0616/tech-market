@@ -18,16 +18,18 @@ const SecondSection = () => {
           scrollTrigger: {
             trigger: containerRef.current,
             start: "center center",
-            end: "bottom+=1000 center",
+            end: "bottom+=500 center",
             pin: true,
             scrub: 1,
           },
         });
 
         timeline.to(".img-container", {
-          width: "85vw",
+          width: "100vw",
           height: "100vh",
           borderRadius: "0% 0% 0% 0%",
+          clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", // Ensuring no clipping
+
           ease: "power2.inOut",
         });
 
@@ -58,7 +60,7 @@ const SecondSection = () => {
           scrollTrigger: {
             trigger: containerRef.current,
             start: "center center",
-            end: "bottom+=1000 center",
+            end: "bottom+=500 center",
             pin: true,
             scrub: 1,
             markers: false,
@@ -98,22 +100,25 @@ const SecondSection = () => {
   }, []);
 
   return (
-    <div id="clip" ref={containerRef} className="bento-image">
-      <div className=" img-container">
-        <img src="/img/service1.jpeg" alt="" />
-      </div>
+    <div ref={containerRef}>
+      <div id="clip" className="bento-image">
+        <div className=" img-container">
+          <img src="/img/service1.jpeg" alt="" />
+        </div>
 
-      <div className="service-title">
-        <h2>
-          Services We <br /> Provide
-        </h2>
+        <div className="service-title">
+          <h2>
+            Services We <br /> Provide
+          </h2>
 
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium,
-          voluptatum doloremque. Numquam suscipit dolore deserunt, facere quis
-          maxime itaque vero voluptatem rem quisquam minima iusto nobis placeat
-          debitis laudantium ab molestias reiciendis. Veritatis, laudantium a.
-        </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Accusantium, voluptatum doloremque. Numquam suscipit dolore
+            deserunt, facere quis maxime itaque vero voluptatem rem quisquam
+            minima iusto nobis placeat debitis laudantium ab molestias
+            reiciendis. Veritatis, laudantium a.
+          </p>
+        </div>
       </div>
     </div>
   );

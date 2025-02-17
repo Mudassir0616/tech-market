@@ -24,7 +24,7 @@ const TextReveal = () => {
         start: "top center+=100",
         end: "bottom 85%",
       },
-      color: "#2A2A2A",
+      color: "#2E3642",
       duration: 5,
       stagger: 1,
     });

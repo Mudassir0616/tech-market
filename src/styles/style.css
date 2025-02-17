@@ -122,30 +122,34 @@ main {
 }
 
 .floating-nav {
-  background-color: lightgray;
-  border: 1px solid #0D0E12;
+  background-color: #E4E4E6;
 }
 
 .nav-container {
   position: fixed;
+  width: 100%;
   top: 0;
-  z-index: 50;
-  height: 2.8rem;
+  z-index: 9999;
   border: none;
   transition: all 0.4s ease;
 }
 @media (min-width: 640px) {
   .nav-container {
     inset-inline: 0;
-    height: 4rem;
   }
 }
 
 .nav-header {
   position: absolute;
-  top: 50%;
+  top: 0;
   width: 100%;
-  transform: translateY(-50%);
+  padding: 10px 0;
+  transition: all 0.4s ease;
+}
+@media (max-width: 768px) {
+  .nav-header {
+    padding: 0;
+  }
 }
 
 .nav-inner {
@@ -156,7 +160,7 @@ main {
 }
 @media (max-width: 768px) {
   .nav-inner {
-    padding: 0 20px;
+    padding: 5px 20px;
   }
 }
 
@@ -186,6 +190,8 @@ main {
 
 .hamburger {
   display: none;
+  cursor: pointer;
+  z-index: 1001;
 }
 @media (max-width: 768px) {
   .hamburger {
@@ -194,12 +200,22 @@ main {
     gap: 5px;
   }
   .hamburger .line {
-    content: "";
     width: 30px;
     height: 3px;
     border-radius: 24px;
-    background-color: white;
+    background-color: #2E3642;
+    transition: all 0.4s ease-in-out;
   }
+}
+
+.active .hamburger .line1 {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.active .hamburger .line2 {
+  opacity: 0;
+}
+.active .hamburger .line3 {
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
 .nav-link {

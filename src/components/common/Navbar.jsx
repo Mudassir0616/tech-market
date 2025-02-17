@@ -1,6 +1,7 @@
 import gsap from "gsap";
 import { useWindowScroll } from "react-use";
 import { useEffect, useRef, useState } from "react";
+import { Link, Links } from "react-router-dom";
 
 const NavBar = () => {
   // Refs for audio and navigation container
@@ -9,6 +10,8 @@ const NavBar = () => {
   const { y: currentScrollY } = useWindowScroll();
   const [isNavVisible, setIsNavVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     if (currentScrollY === 0) {
@@ -37,8 +40,8 @@ const NavBar = () => {
   }, [isNavVisible]);
 
   return (
-    <nav className="nav-container" ref={navContainerRef}>
-      <header className="nav-header">
+    <nav className={`nav-container ${isOpen ? "active" : ""}`}>
+      <header className="nav-header" ref={navContainerRef}>
         <nav className="nav-inner">
           {/* <!-- Logo and Product Button --> */}
           <div className="logo-container">
@@ -49,22 +52,22 @@ const NavBar = () => {
           <div className="nav-links-container">
             <div className="nav-links">
               {/* <!-- Replace `navItems` with actual nav items --> */}
-              <a href="#item1" className="nav-link">
-                Item 1
+              <a href={"/"} className="nav-link">
+                Home
               </a>
-              <a href="#item2" className="nav-link">
-                Item 2
+              <a href={"/about-us"} className="nav-link">
+                About Us
               </a>
-              <a href="#item3" className="nav-link">
-                Item 3
+              <a href={"/blogs"} className="nav-link">
+                Blogs
               </a>
             </div>
           </div>
 
-          <div className="hamburger">
-            <div className="line"></div>
-            <div className="line"></div>
-            <div className="line"></div>
+          <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
+            <div className="line line1"></div>
+            <div className="line line2"></div>
+            <div className="line line3"></div>
           </div>
         </nav>
       </header>
