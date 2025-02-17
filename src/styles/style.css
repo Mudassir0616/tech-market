@@ -122,7 +122,20 @@ main {
 }
 
 .floating-nav {
-  background-color: #E4E4E6;
+  background-color: transparent;
+  /* Adjust opacity */
+  backdrop-filter: blur(6px);
+  /* Adjust blur intensity */
+  -webkit-backdrop-filter: blur(6px);
+  /* For Safari support */
+}
+.floating-nav .nav-link {
+  color: #1A1A1A;
+}
+@media (max-width: 768px) {
+  .floating-nav .hamburger .line {
+    background-color: #2E3642;
+  }
 }
 
 .nav-container {
@@ -203,7 +216,7 @@ main {
     width: 30px;
     height: 3px;
     border-radius: 24px;
-    background-color: #2E3642;
+    background-color: white;
     transition: all 0.4s ease-in-out;
   }
 }
@@ -225,7 +238,7 @@ main {
   font-size: 1rem;
   font-weight: 500;
   transition: color 0.4s ease;
-  color: #0073e6;
+  color: white;
 }
 
 p {
@@ -1080,6 +1093,22 @@ ul ol {
 }
 .text-bold {
   font-weight: bold;
+}
+
+h6,
+.h6,
+h5,
+.h5,
+h4,
+.h4,
+h3,
+.h3,
+h2,
+.h2,
+h1,
+h1,
+.h1 {
+  font-family: "Poppins", sans-serif;
 }
 
 h3,

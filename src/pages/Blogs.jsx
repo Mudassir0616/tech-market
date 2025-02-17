@@ -1,4 +1,5 @@
 import React from "react";
+import ConnectUs from "../components/common/ConnectUs";
 
 const Blogs = () => {
   const blogs_data = [
@@ -40,14 +41,22 @@ const Blogs = () => {
               <div className="img-container">
                 <img src={blog?.image} alt="" />
               </div>
-              <h4>{blog?.title}</h4>
-              <p className="line-clamp-2">{blog?.description}</p>
 
-              <span>{blog?.created_at}</span>
+              <div className="content">
+                <h4>{blog?.title}</h4>
+                <p className="line-clamp-2">{blog?.description}</p>
+
+                <div className="bottom-section">
+                  <span className="read-more">Read More</span>
+                  <span>{blog?.created_at}</span>
+                </div>
+              </div>
             </div>
           ))}
         </div>
       </div>
+
+      <ConnectUs />
     </section>
   );
 };

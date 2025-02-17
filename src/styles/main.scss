@@ -280,16 +280,186 @@
 
 
      .blogs-container {
+         padding-top: 20px;
+
          .blog-title {
              h1 {
                  font-size: 4rem;
                  margin: 0;
                  font-weight: 500;
+
+                 @media screen and (max-width: 768px) {
+                     font-size: 2.5rem;
+                 }
              }
 
              p {
                  font-size: 20px;
                  font-weight: 500;
+
+                 @media screen and (max-width: 768px) {
+                     font-size: 16px;
+                 }
+             }
+         }
+
+         .blogs-grid {
+             display: grid;
+             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+             gap: 20px;
+             margin-top: 20px;
+
+             @media screen and (max-width: 768px) {
+                 grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+             }
+         }
+
+         .blog-card {
+             transition: all 0.3s ease-out;
+             padding: 20px;
+             cursor: pointer;
+
+             &:hover {
+                 box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+             }
+
+             .img-container {
+                 width: 100%;
+                 // max-height: 225px;
+                 overflow: hidden;
+                 /* Ensures the image stays within the container */
+
+                 img {
+                     width: 100%;
+                     height: 100%;
+                     object-fit: cover;
+                     transition: transform 5s ease;
+                     /* Smooth zoom transition */
+                     transform-origin: center center;
+                     /* Zoom from the center */
+
+                     &:hover {
+                         transform: scale(1.4);
+                         /* Slight zoom effect */
+                     }
+                 }
+             }
+
+             .content {
+                 padding: 0 5px;
+
+                 h4 {
+                     font-size: 20px;
+                     margin: 10px 0;
+                     font-weight: 500;
+                 }
+
+                 p {
+                     font-size: 14px;
+                 }
+
+                 .bottom-section {
+                     display: flex;
+                     align-items: center;
+                     justify-content: space-between;
+                     gap: 20px;
+
+                     .read-more {
+                         font-size: 14px;
+                         font-weight: 500;
+                         color: $macbook-color;
+                         width: fit-content;
+                         position: relative;
+                         /* To position the pseudo-element relative to this element */
+                         cursor: pointer;
+                         /* Makes it look clickable */
+                     }
+
+                     .read-more::before {
+                         content: '';
+                         position: absolute;
+                         left: 0;
+                         bottom: -2px;
+                         /* Adjust as needed to position the line directly below the text */
+                         width: 75px;
+                         height: 2px;
+                         /* Thickness of the underline */
+                         background-color: $macbook-color;
+                         /* Color of the underline */
+                         transform: scaleX(0);
+                         transform-origin: right;
+                         transition: transform 0.3s ease;
+                     }
+
+                     .read-more:hover::before {
+                         transform: scaleX(1);
+                         transform-origin: left;
+                     }
+
+                     span {
+                         font-size: 14px;
+                         color: $grey-text-color;
+                     }
+                 }
+             }
+         }
+     }
+
+
+
+     .connect-us {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         flex-direction: column;
+         text-align: center;
+         padding: 100px 150px;
+
+         @media screen and (max-width: 768px) {
+             padding: 0 0 100px;
+         }
+
+         h1 {
+             font-size: 4rem;
+             font-weight: 500;
+             margin: 20px 0;
+             line-height: 80px;
+
+             @media screen and (max-width: 768px) {
+                 font-size: 2rem;
+                 line-height: 40px;
+             }
+         }
+
+         p {
+             font-size: 1.5rem;
+             font-weight: 400;
+             color: $grey-text-color;
+             margin: 10px 0 40px;
+
+             @media screen and (max-width: 768px) {
+                 font-size: 1rem;
+                 margin: 0 0 20px;
+             }
+         }
+
+         button {
+             border: 1px solid $macbook-color;
+             border-radius: 1px;
+             padding: 10px 40px;
+             background-color: transparent;
+             font-size: 1.5rem;
+             color: $macbook-color;
+             transition: 0.2s all linear;
+             cursor: pointer;
+
+             &:hover {
+                 background-color: $macbook-color;
+                 color: white;
+             }
+
+             @media screen and (max-width: 768px) {
+                 font-size: 1rem;
              }
          }
      }
