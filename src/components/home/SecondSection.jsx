@@ -21,6 +21,7 @@ const SecondSection = () => {
             end: "bottom+=500 center",
             pin: true,
             scrub: 1,
+            markers: true,
           },
         });
 
@@ -63,7 +64,7 @@ const SecondSection = () => {
             end: "bottom+=500 center",
             pin: true,
             scrub: 1,
-            markers: false,
+            markers: true,
           },
         });
 

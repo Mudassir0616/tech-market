@@ -24,7 +24,7 @@ const NeedUs = () => {
             trigger: container_ref.current,
             start: "top 50%", // Animation starts when the section is 80% in viewport
             toggleActions: "play none none reverse",
-            markers: true,
+            markers: false,
           },
         }
       );

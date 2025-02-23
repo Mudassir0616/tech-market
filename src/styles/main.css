@@ -85,8 +85,8 @@
 }
 .bento-image .img-container {
   position: relative;
-  width: 500px;
-  height: 600px;
+  width: 400px;
+  height: 500px;
   -webkit-clip-path: polygon(15% 1%, 95% 7%, 95% 90%, 0% 100%);
           clip-path: polygon(15% 1%, 95% 7%, 95% 90%, 0% 100%);
 }
