@@ -117,8 +117,8 @@
 
          .img-container {
              position: relative;
-             width: 400px;
-             height: 500px;
+             width: 500px;
+             height: 600px;
              clip-path: polygon(15% 1%, 95% 7%, 95% 90%, 0% 100%);
 
              @media screen and (max-width: 768px) {
@@ -139,8 +139,8 @@
 
          .service-title {
              position: absolute;
-             top: 20%;
-             left: 25%;
+             top: 15%;
+             left: 10%;
              color: white;
              z-index: 100;
              opacity: 0;
@@ -171,6 +171,149 @@
 
                  @media screen and (max-width: 768px) {
                      font-size: 14px;
+                 }
+             }
+         }
+     }
+
+     .bento-image-2 {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         padding: 40px 0;
+         height: 100dvh;
+
+         .img-container {
+             position: relative;
+             width: 100dvw;
+             height: 100dvh;
+             clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+
+             img {
+                 object-fit: cover;
+                 border-radius: 0;
+             }
+         }
+
+         .title-container {
+             align-items: flex-start;
+             justify-content: start;
+         }
+
+         .service-title {
+             position: absolute;
+             top: 15%;
+             left: 10%;
+             color: white;
+             z-index: 100;
+             opacity: 1;
+             max-width: 700px;
+
+             @media screen and (max-width: 768px) {
+                 left: 0;
+                 top: 100px;
+                 max-width: 100%;
+                 padding: 0 20px;
+             }
+
+             h2 {
+                 font-size: 60px;
+                 font-weight: 400;
+                 line-height: 68px;
+                 color: white;
+                 margin-bottom: 20px;
+
+                 @media screen and (max-width: 768px) {
+                     font-size: 32px;
+                     line-height: 50px;
+                 }
+             }
+
+             p {
+                 font-size: 16px;
+
+                 @media screen and (max-width: 768px) {
+                     font-size: 14px;
+                 }
+             }
+         }
+     }
+
+
+
+
+     ///////////////////////////////// Need Us //////////////////////
+
+     .need-us-container {
+         display: flex;
+         align-items: flex-start;
+         flex-direction: row;
+         flex-wrap: wrap;
+         gap: 100px;
+         padding: 100px 0;
+
+         @media screen and (max-width: 768px) {
+             flex-direction: column;
+             gap: 40px;
+             padding: 40px 0;
+         }
+
+         h4 {
+             flex: 1;
+             font-size: 36px;
+             font-weight: 400;
+             line-height: 46px;
+             margin: 10px;
+             max-width: 500px;
+             color: $grey-text-color;
+
+             @media screen and (max-width: 768px) {
+                 font-size: 24px;
+                 line-height: 36px;
+             }
+         }
+
+         .key-points {
+             flex: 1.5;
+             display: flex;
+             flex-direction: column;
+             align-items: flex-end;
+             gap: 80px;
+
+             @media screen and (max-width: 768px) {
+                 gap: 40px;
+             }
+
+             .points {
+                 display: flex;
+                 gap: 40px;
+
+                 @media screen and (max-width: 768px) {
+                     gap: 20px;
+                 }
+
+                 img {
+                     width: 80px;
+                     height: 80px;
+
+                     @media screen and (max-width: 768px) {
+                         width: 60px;
+                         height: 60px;
+                     }
+                 }
+
+                 h2 {
+                     color: $dark-text-color;
+                     font-size: 42px;
+                     font-weight: 500;
+                     line-height: 58px;
+                     margin: 0;
+                     max-width: 700px;
+
+                     @media screen and (max-width: 768px) {
+                         font-size: 26px;
+                         line-height: 40px;
+                     }
                  }
              }
          }
@@ -425,6 +568,10 @@
              margin: 20px 0;
              line-height: 80px;
 
+             span {
+                 color: #3E77EE;
+             }
+
              @media screen and (max-width: 768px) {
                  font-size: 2rem;
                  line-height: 40px;
@@ -442,24 +589,64 @@
                  margin: 0 0 20px;
              }
          }
+     }
 
-         button {
-             border: 1px solid $macbook-color;
-             border-radius: 1px;
-             padding: 10px 40px;
-             background-color: transparent;
-             font-size: 1.5rem;
-             color: $macbook-color;
-             transition: 0.2s all linear;
-             cursor: pointer;
 
-             &:hover {
-                 background-color: $macbook-color;
-                 color: white;
-             }
+
+
+     .contact-container {
+         margin-top: 100px;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+
+         h1 {
+             max-width: 700px;
+             text-align: center;
+             font-size: 54px;
+             font-weight: 500;
+             line-height: 64px;
+             color: $dark-text-color;
+             text-transform: capitalize;
 
              @media screen and (max-width: 768px) {
-                 font-size: 1rem;
+                 font-size: 32px;
+                 line-height: 42px;
+             }
+
+             span {
+                 color: #E10600;
+                 color: #3E77EE;
+             }
+         }
+
+
+         .form-container {
+             display: flex;
+             flex-direction: row;
+             flex-wrap: wrap;
+             gap: 40px;
+             padding: 100px;
+
+             @media screen and (max-width: 768px) {
+                 flex-direction: column;
+                 padding: 0;
+             }
+
+             .form {
+                 flex: 1;
+                 border: 1px solid $border-color;
+                 border-radius: 10px;
+                 padding: 20px;
+
+                 .black-btn {
+                     margin: 30px 20px 0;
+                     font-size: 16px;
+                 }
+             }
+
+             .details {
+                 flex: 1;
              }
          }
      }

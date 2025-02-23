@@ -5,6 +5,9 @@ import Services from "../components/home/Services";
 import TextReveal from "../components/home/TextReveal";
 import AnimatedTitle from "../components/common/animation/AnimatedTitle";
 import NewSection from "../components/home/NewSection";
+import ConnectUs from "../components/common/ConnectUs";
+import NeedUs from "../components/home/NeedUs";
+import Custom from "../components/home/Custom";
 
 const Home = () => {
   return (
@@ -25,13 +28,17 @@ const Home = () => {
 
       <SecondSection />
 
+      <NeedUs />
+
       <Services />
 
       <TextReveal />
 
-      {/* <NewSection /> */}
+      <Custom />
 
-      <div style={{ height: "200dvh" }}></div>
+      <ConnectUs />
+
+      {/* <NewSection /> */}
     </>
   );
 };

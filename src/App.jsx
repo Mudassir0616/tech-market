@@ -5,8 +5,12 @@ import "./styles/style.css";
 import "./styles/main.css";
 import NavBar from "./components/common/Navbar";
 import Blogs from "./pages/Blogs";
+import useLenis from "./hooks/useLenis";
+import ContactUs from "./pages/ContactUs";
 
 function App() {
+  useLenis();
+
   return (
     <>
       <head>
@@ -23,6 +27,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/blogs" element={<Blogs />} />
+        <Route path="/contact-us" element={<ContactUs />} />
       </Routes>
     </>
   );

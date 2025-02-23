@@ -1,5 +1,7 @@
 import React from "react";
 import ConnectUs from "../components/common/ConnectUs";
+import { Breadcrumbs } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Blogs = () => {
   const blogs_data = [
@@ -27,6 +29,14 @@ const Blogs = () => {
   ];
   return (
     <section className="container">
+      <div role="presentation" className="bread-crumbs">
+        <Breadcrumbs aria-label="breadcrumb">
+          <Link underline="hover" color="inherit" to="/">
+            Home
+          </Link>
+          <p>Blogs</p>
+        </Breadcrumbs>
+      </div>
       <div className="blogs-container">
         <div className="blog-title">
           <h1>Blogs</h1>
