@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import AnimatedTitle from "../common/animation/AnimatedTitle";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -8,13 +9,6 @@ const SecondSection = () => {
   const containerRef = useRef(null);
 
   useEffect(() => {
-    // Define the resize handler to refresh ScrollTrigger
-    const handleResize = () => ScrollTrigger.refresh();
-
-    // Add event listeners for resize and orientation changes
-    window.addEventListener("resize", handleResize);
-    window.addEventListener("orientationchange", handleResize);
-
     const ctx = gsap.context(() => {
       const mm = gsap.matchMedia();
 
@@ -35,7 +29,8 @@ const SecondSection = () => {
           width: "100vw",
           height: "100vh",
           borderRadius: "0% 0% 0% 0%",
-          clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+          clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", // Ensuring no clipping
+
           ease: "power2.inOut",
         });
 
@@ -48,6 +43,7 @@ const SecondSection = () => {
           "<"
         );
 
+        // Service title visibility logic
         timeline.to(
           ".service-title",
           {
@@ -55,7 +51,7 @@ const SecondSection = () => {
             ease: "power2.inOut",
             duration: 0.5,
           },
-          "-=0.5"
+          "-=0.5" // Start a bit earlier to smoothen transition
         );
       });
 
@@ -75,7 +71,7 @@ const SecondSection = () => {
         mobileTimeline.to(".img-container", {
           width: "100vw",
           height: "100vh",
-          clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+          clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", // Ensuring no clipping
           ease: "power2.inOut",
         });
 
@@ -101,18 +97,13 @@ const SecondSection = () => {
       });
     }, containerRef);
 
-    // Cleanup: Remove event listeners and revert GSAP context
-    return () => {
-      window.removeEventListener("resize", handleResize);
-      window.removeEventListener("orientationchange", handleResize);
-      ctx.revert();
-    };
+    return () => ctx.revert();
   }, []);
 
   return (
     <div ref={containerRef}>
       <div id="clip" className="bento-image">
-        <div className="img-container">
+        <div className=" img-container">
           <img src="/img/service1.jpeg" alt="" />
         </div>
 
