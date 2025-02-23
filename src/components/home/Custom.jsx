@@ -28,6 +28,7 @@ const Custom = () => {
             end: "bottom+=500 center",
             pin: true,
             scrub: 1,
+            markers: true,
           },
         });
 
@@ -69,7 +70,7 @@ const Custom = () => {
             end: "bottom+=500 center",
             pin: true,
             scrub: 1,
-            markers: false,
+            markers: true,
           },
         });
 
@@ -110,8 +111,8 @@ const Custom = () => {
   }, []);
 
   return (
-    <section ref={containerRef}>
-      <div id="clip" className="bento-image-2">
+    <section>
+      <div id="clip" className="bento-image-2" ref={containerRef}>
         <div className=" img-container">
           <img src="/img/banner.jpg" alt="" />
         </div>

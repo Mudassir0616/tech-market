@@ -27,7 +27,7 @@ const SecondSection = () => {
             end: "bottom+=500 center",
             pin: true,
             scrub: 1,
-            markers: true,
+            markers: false,
           },
         });
 
@@ -68,7 +68,7 @@ const SecondSection = () => {
             end: "bottom+=500 center",
             pin: true,
             scrub: 1,
-            markers: true,
+            markers: false,
           },
         });
 
@@ -110,8 +110,8 @@ const SecondSection = () => {
   }, []);
 
   return (
-    <div ref={containerRef}>
-      <div id="clip" className="bento-image">
+    <div>
+      <div id="clip" className="bento-image" ref={containerRef}>
         <div className="img-container">
           <img src="/img/service1.jpeg" alt="" />
         </div>
