@@ -9,6 +9,13 @@ const Custom = () => {
   const containerRef = useRef(null);
 
   useEffect(() => {
+    // Define the resize handler to refresh ScrollTrigger
+    const handleResize = () => ScrollTrigger.refresh();
+
+    // Add event listeners for resize and orientation changes
+    window.addEventListener("resize", handleResize);
+    window.addEventListener("orientationchange", handleResize);
+
     const ctx = gsap.context(() => {
       const mm = gsap.matchMedia();
 
@@ -95,7 +102,11 @@ const Custom = () => {
       });
     }, containerRef);
 
-    return () => ctx.revert();
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("orientationchange", handleResize);
+      ctx.revert();
+    };
   }, []);
 
   return (
